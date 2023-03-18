@@ -1,4 +1,4 @@
-package com.example.seleniumtests;
+package com.example.seleniumtests.base;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;

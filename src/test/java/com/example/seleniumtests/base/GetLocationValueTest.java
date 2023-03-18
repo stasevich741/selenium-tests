@@ -1,12 +1,9 @@
-package com.example.seleniumtests;
+package com.example.seleniumtests.base;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.Rectangle;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 

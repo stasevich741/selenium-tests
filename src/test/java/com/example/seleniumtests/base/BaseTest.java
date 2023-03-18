@@ -1,4 +1,4 @@
-package com.example.seleniumtests;
+package com.example.seleniumtests.base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+import java.util.logging.Level;
 
 public abstract class BaseTest {
     protected WebDriver driver;
@@ -16,6 +17,7 @@ public abstract class BaseTest {
     public static void setUpClass() {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         WebDriverManager.chromedriver().setup();
+        java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.ALL);
     }
 
     @BeforeEach
@@ -26,8 +28,8 @@ public abstract class BaseTest {
 
     @AfterEach
     public void tearDown() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

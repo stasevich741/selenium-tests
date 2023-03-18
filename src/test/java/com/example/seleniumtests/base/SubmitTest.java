@@ -1,10 +1,8 @@
-package com.example.seleniumtests;
+package com.example.seleniumtests.base;
 
-import com.example.seleniumtests.BaseTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 
 @Slf4j
 public class SubmitTest extends BaseTest {

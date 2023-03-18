@@ -1,9 +1,8 @@
-package com.example.seleniumtests;
+package com.example.seleniumtests.base;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 @Slf4j
 public class GetTextTest extends BaseTest {
@@ -25,10 +24,10 @@ public class GetTextTest extends BaseTest {
         String text = driver.findElement(By.cssSelector("#text")).getText();
         log.info("Content: {}",  text);
 
-        driver.findElement(By.cssSelector("#text")).sendKeys("  o", "t", "u", "s", " test  ");
+        driver.findElement(By.cssSelector("#text")).sendKeys("  t", "e", "s", "t", " test  ");
         text = driver.findElement(By.cssSelector("#text")).getText();
         log.info("Content: {}", text);
-        log.warn("Why it;s still empty?");
+        log.warn("make it by get attribute value!");
     }
 }
 
